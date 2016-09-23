@@ -95,7 +95,6 @@
             color: #888;
         }
         .forgot-password:hover,
-
         .forgot-password:focus {
             text-decoration: underline;
             color: #666;
@@ -107,7 +106,6 @@
             color: #fff;
             font-size: 14px;
             height: auto;
-            margin-bottom: 1px;
             font-weight: normal;
             padding: 14px 0;
             text-transform: uppercase;
