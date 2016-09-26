@@ -249,7 +249,7 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-offset-3">
-                                            <input type="submit" name="borrow-submit" id="borrow-submit" tabindex="4" class="form-control btn btn-borrow" value="Register Now">
+                                            <input type="submit" name="borrow-submit" id="borrow-submit" tabindex="4" class="form-control btn btn-borrow" value="Tính toán">
                                         </div>
                                     </div>
                                 </div>

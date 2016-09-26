@@ -107,20 +107,25 @@
         $(document).ready(function () {
 
             $("#slt_TypeMoney" ).change(function() {
-                table.clear().draw();
+                
                  $('#progress').show();
                 $('#slt_TypeMoney').prop('disabled', 'disabled');
+                 table.clear().draw();
                 var type =$("#slt_TypeMoney").find("option:selected" ).text();
                 $.ajax({
                     url: "exchange",
                     type: "get",
                     dataType:'json',
                     data:{
-                        "type":type,
+                        "type":function(){
+                            var text = $('.dataTables_empty');
+                            text.text("Loading...");
+                            return type;
+                        },
                         "_token": _token
                     },
                     success: function (result) {
-
+                      
                        for(var i=0; i<Object.keys(result['data']).length; i++){
                            table.row.add(result['data'][i]).draw(false);
 
