@@ -32,3 +32,9 @@ Route::get('/getHTML',function (){
     foreach($html->find('table') as $element)
         echo $element->outertext;
 });
+Route::get('admin', function (){
+   return view('admin.home');
+});
+Route::get('staff/login',function (){
+   return view('staff.login');
+});
