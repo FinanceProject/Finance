@@ -10,6 +10,7 @@ return array(
     'CreateCategoryRequestsTable' => $baseDir . '/database/migrations/2016_09_26_084369_create_category_requests_table.php',
     'CreateCustomersTable' => $baseDir . '/database/migrations/2016_09_26_084359_create_customers_table.php',
     'CreateRequestsTable' => $baseDir . '/database/migrations/2016_09_27_072159_create_requests_table.php',
+    'CreateStaffAndRequestsTable' => $baseDir . '/database/migrations/2016_09_27_090456_create_staff_and_requests_table.php',
     'CreateStaffTable' => $baseDir . '/database/migrations/2016_09_26_084445_create_staff_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',

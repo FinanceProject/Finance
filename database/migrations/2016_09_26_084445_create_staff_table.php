@@ -23,8 +23,6 @@ class CreateStaffTable extends Migration
             $table->string('avatar')->nullable();
             $table->integer('bank_id')->unsigned();
             $table->foreign('bank_id')->references('id')->on('banks')->onDelete('cascade');
-            $table->integer('category_request_id')->unsigned();
-            $table->foreign('category_request_id')->references('id')->on('category_requests')->onDelete('cascade');
             $table->timestamps();
         });
     }
