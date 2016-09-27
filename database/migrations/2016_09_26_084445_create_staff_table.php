@@ -15,14 +15,16 @@ class CreateStaffTable extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('bank_id')->unsigned();
-            $table->foreign('bank_id')->references('id')->on('banks')->onDelete('cascade');
             $table->string('emaill');
             $table->string('password');
             $table->string('fullname');
-            $table->string('level');
+            $table->string('level')->nullable();
             $table->string('number_phone');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
+            $table->integer('bank_id')->unsigned();
+            $table->foreign('bank_id')->references('id')->on('banks')->onDelete('cascade');
+            $table->integer('category_request_id')->unsigned();
+            $table->foreign('category_request_id')->references('id')->on('category_requests')->onDelete('cascade');
             $table->timestamps();
         });
     }

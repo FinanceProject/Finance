@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bank extends Model
+class Request extends Model
 {
-    protected $table = 'banks';
+    protected $table = 'requests';
     protected $fillable = [
-        'name', 'fullname', 'link','intro','logo','created_at'
+        'customer_id', 'category_request_id', 'content','status'
     ];
     public $timestamps = true;
 }

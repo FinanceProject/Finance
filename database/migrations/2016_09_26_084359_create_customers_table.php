@@ -17,12 +17,13 @@ class CreateCustomersTable extends Migration
             $table->increments('id');
             $table->string('fullname');
             $table->string('number_phone');
-            $table->string('address');
-            $table->string('city');
-            $table->string('gender');
-            $table->string('birthday');
-            $table->string('job');
-            $table->string('inconme');
+            $table->string('email')->nullable();
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('birthday')->nullable();
+            $table->string('job')->nullable();
+            $table->string('inconme')->nullable();
             $table->timestamps();
         });
     }

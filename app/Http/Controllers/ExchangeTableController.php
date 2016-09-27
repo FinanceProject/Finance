@@ -197,7 +197,14 @@ class ExchangeTableController extends Controller
    }
    function changeDotToComma($array){
        for($i = 0; $i<count($array); $i++){
-           $array[$i] =str_replace('.',',', $array[$i]);
+           for($j =0; $j <strlen($array[$i]); $j++)
+           {
+               if($array[$i][$j] =='.'){
+                   $array[$i][$j]=',';
+               }else if($array[$i][$j] ==','){
+                   $array[$i][$j]='.';
+               }
+           }
        }
        return $array;
    }
