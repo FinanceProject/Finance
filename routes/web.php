@@ -42,6 +42,9 @@ Route::get('admin', function (){
 Route::get('staff/login',function (){
    return view('staff.login');
 });
+Route::get('staff/forgot-password',function (){
+    return view('staff.forgot_password');
+});
 Route::get('getStaffFromBank', function () {
     $staff = Bank::with('staff')->where("name",'ABBank')->get();
     foreach ($staff as $a){
