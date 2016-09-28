@@ -11,4 +11,8 @@ class Bank extends Model
         'name', 'fullname', 'link','intro','logo','created_at'
     ];
     public $timestamps = true;
+
+    function staff(){
+        return $this->hasMany("App\Staff");
+    }
 }

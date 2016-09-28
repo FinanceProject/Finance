@@ -11,7 +11,11 @@
 |
 */
 
+use App\CategoryRequest;
+use App\Request;
+use App\Staff;
 use Yangqi\Htmldom\Htmldom;
+use App\Bank;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,4 +41,32 @@ Route::get('admin', function (){
 });
 Route::get('staff/login',function (){
    return view('staff.login');
+});
+Route::get('getStaffFromBank', function () {
+    $staff = Bank::with('staff')->where("name",'ABBank')->get();
+    foreach ($staff as $a){
+        print_r($a->staff[0]->number_phone);
+    }
+});
+Route::get('getBankFromStaff', function () {
+    $bank = Staff::with('bank')->get();
+    foreach ($bank as $a){
+        print_r($a->toArray());
+    }
+});
+Route::get('catefromstaff', function () {
+    $category_request = Staff::with('category_request')->where('id',3)->get();
+    foreach ($category_request as $a){
+        $array = $a->category_request->toArray();
+        print_r($array[0]['id']);
+    }
+    print_r("HUNG");
+});
+Route::get('stafffromcate', function () {
+    $staff = CategoryRequest::with('staff')->get();
+    foreach ($staff as $a){
+        $array = $a->toArray();
+        print_r($array);
+    }
+
 });

@@ -11,4 +11,10 @@ class Request extends Model
         'customer_id', 'category_request_id', 'content','status'
     ];
     public $timestamps = true;
+    function category_request(){
+        return $this->belongsTo("App\CategoryRequest");
+    }
+    function customer(){
+        return $this->belongsTo("App\Customer");
+    }
 }

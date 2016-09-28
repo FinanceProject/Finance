@@ -216,7 +216,7 @@
                                 <div class="form-group col-md-6">
                                     <select class="form-control text-center" id="slt_intent" title="Mục đích vay">
                                         <option selected disabled>Mục đích vay</option>
-                                        <option>Vay mua bất động sản</option>
+                                        <option>Vay mua bất động sản </option>
                                         <option>Vay mua xe</option>
                                         <option>Vay mua nhà</option>
                                         <option>Vay tiêu dùng</option>

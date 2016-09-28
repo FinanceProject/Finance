@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStaffAndRequestsTable extends Migration
+class CreateCategoryRequestStaffTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateStaffAndRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('staff_and_requests', function (Blueprint $table) {
+        Schema::create('category_request_staff', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('staff_id')->unsigned();
             $table->foreign('staff_id')->references('id')->on('staff')->onDelete('cascade');
@@ -29,6 +29,6 @@ class CreateStaffAndRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff_and_requests');
+        //
     }
 }

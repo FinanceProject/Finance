@@ -286,10 +286,10 @@ class ComposerStaticInitf36edca3d5dafabbe99a423fc26d256e
 
     public static $classMap = array (
         'CreateBanksTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_26_084350_create_banks_table.php',
+        'CreateCategoryRequestStaffTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_28_025630_create_category_request_staff_table.php',
         'CreateCategoryRequestsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_26_084369_create_category_requests_table.php',
         'CreateCustomersTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_26_084359_create_customers_table.php',
         'CreateRequestsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_27_072159_create_requests_table.php',
-        'CreateStaffAndRequestsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_27_090456_create_staff_and_requests_table.php',
         'CreateStaffTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_26_084445_create_staff_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

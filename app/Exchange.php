@@ -9,6 +9,7 @@ use Yangqi\Htmldom\Htmldom;
 class Exchange extends Model
 {
 
+    public $timestamps = true;
     /*Lấy tỷ giá ngoại tệ từ các ngân hàng với các thuộc tính truyền vào là:
        - $bankname: Tên của Ngân Hàng.
        - $posTable: Vị trí của bảng trong trang web đó.

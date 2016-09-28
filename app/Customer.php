@@ -11,4 +11,7 @@ class Customer extends Model
         'fullname', 'number_phone', 'email','address','city','gender','birthday','job','income'
     ];
     public $timestamps = true;
+    function request(){
+        return $this->hasMany("App\Request");
+    }
 }
