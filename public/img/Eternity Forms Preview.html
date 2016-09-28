@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://codefeed.in.iis2103.shared-servers.com/eternityForms/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js no-touch boxshadow textshadow cssanimations cssgradients csstransforms csstransforms3d csstransitions generatedcontent"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Eternity Forms Preview</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./Eternity Forms Preview_files/preview.css" rel="stylesheet">
+    <script src="./Eternity Forms Preview_files/modernizr.js.tải xuống"></script>
+    <link href="./Eternity Forms Preview_files/css" rel="stylesheet" type="text/css">
+</head>
+<body class="eternity-form scroll-animations-activated">
+    <section class="colorBg1 colorBg active" id="demo1" data-panel="first">
+
+        <div class=" container">
+
+            <div class="login-form-section">
+                <div class="login-content  animated bounceIn" data-animation="bounceIn">
+                    <form>
+                        <div class="section-title">
+                            <h3>LogIn to your Account</h3>
+                        </div>
+                        <div class="textbox-wrap">
+                            <div class="input-group">
+                                <span class="input-group-addon "><i class="icon-user icon-color"></i></span>
+                                <input type="text" required="required" class="form-control" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="textbox-wrap">
+                            <div class="input-group">
+                                <span class="input-group-addon "><i class="icon-key icon-color"></i></span>
+                                <input type="password" required="required" class="form-control " placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="login-form-action clearfix">
+                            <div class="checkbox pull-left">
+                                <div class="custom-checkbox">
+                                    <div class="icheckbox_square-blue checked" style="position: relative;"><input type="checkbox" checked="" name="iCheck" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                </div>
+                                <span class="checkbox-text pull-left">&nbsp;Remember Me</span>
+                            </div>
+                            <button type="submit" class="btn btn-success pull-right green-btn">LogIn &nbsp; <i class="icon-chevron-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+    <section class="colorBg form-seprator i1">
+
+        <i class="icon-sun" data-animation="bounceInUp"></i>
+        <h1 data-animation="bounceInUp" data-animation-delay=".2s" style="animation-delay: 0.2s;">Eternity Forms</h1>
+        <br>
+        <hgroup>
+            <h3 data-animation="fadeInUp" data-animation-delay=".3s" style="animation-delay: 0.3s;">Login Form</h3>
+            <h3 data-animation="fadeInUp" data-animation-delay=".4s" style="animation-delay: 0.4s;">Registraion Form</h3>
+            <h3 data-animation="fadeInUp" data-animation-delay=".5s" style="animation-delay: 0.5s;">Forgot Password Form</h3>
+        </hgroup>
+
+    </section>
+    <script src="./Eternity Forms Preview_files/jquery-1.9.1.js.tải xuống"></script>
+    <script src="./Eternity Forms Preview_files/bootstrap.js.tải xuống"></script>
+    <script src="./Eternity Forms Preview_files/respond.src.js.tải xuống"></script>
+    <script src="./Eternity Forms Preview_files/jquery.icheck.js.tải xuống"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $("input").iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                increaseArea: '20%' // optional
+            });
+            $(".dark input").iCheck({
+                checkboxClass: 'icheckbox_polaris',
+                increaseArea: '20%' // optional
+            });
+            $(".form-control").focus(function () {
+                $(this).closest(".textbox-wrap").addClass("focused");
+            }).blur(function () {
+                $(this).closest(".textbox-wrap").removeClass("focused");
+            });
+
+            //On Scroll Animations
+
+
+            if ($(window).width() >= 968 && !Modernizr.touch && Modernizr.cssanimations) {
+
+                $("body").addClass("scroll-animations-activated");
+                $('[data-animation-delay]').each(function () {
+                    var animationDelay = $(this).data("animation-delay");
+                    $(this).css({
+                        "-webkit-animation-delay": animationDelay,
+                        "-moz-animation-delay": animationDelay,
+                        "-o-animation-delay": animationDelay,
+                        "-ms-animation-delay": animationDelay,
+                        "animation-delay": animationDelay
+                    });
+
+                });
+                $('[data-animation]').waypoint(function (direction) {
+                    if (direction == "down") {
+                        $(this).addClass("animated " + $(this).data("animation"));
+
+                    }
+                }, {
+                    offset: '90%'
+                }).waypoint(function (direction) {
+                    if (direction == "up") {
+                        $(this).removeClass("animated " + $(this).data("animation"));
+
+                    }
+                }, {
+                    offset: $(window).height() + 1
+                });
+            }
+
+            //End On Scroll Animations
+
+
+            $(".main-nav a[href]").click(function () {
+                var scrollElm = $(this).attr("href");
+
+                $("html,body").animate({ scrollTop: $(scrollElm).offset().top }, 500);
+
+                $(".main-nav a[href]").removeClass("active");
+                $(this).addClass("active");
+            });
+
+
+
+
+            if ($(window).width() > 1000 && !Modernizr.touch) {
+                var options = {
+                    $menu: ".main-nav",
+                    menuSelector: 'a',
+                    panelSelector: 'section',
+                    namespace: '.panelSnap',
+                    onSnapStart: function () { },
+                    onSnapFinish: function ($target) {
+                        $target.find('input:first').focus();
+                    },
+                    directionThreshold: 50,
+                    slideSpeed: 200
+                };
+                $('body').panelSnap(options);
+
+            }
+
+            $(".colorBg a[href]").click(function () {
+                var scrollElm = $(this).attr("href");
+
+                $("html,body").animate({ scrollTop: $(scrollElm).offset().top }, 500);
+
+                return false;
+            });
+
+
+           
+
+        });
+    </script>
+
+
+
+</body></html>
